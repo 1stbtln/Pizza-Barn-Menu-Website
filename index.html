@@ -15,6 +15,17 @@
       height: 100%;
     }
 
+    #background-gif {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 1; 
+      opacity: 0.6; 
+    }
+
     #outerContainer {
       display: flex;
       align-items: center;
@@ -102,6 +113,8 @@
   </style>
 </head>
 <body>
+  <img id="background-gif" src="./assets/Pizza Barn Background Video.gif" alt="Sparks Background">
+
   <div id="outerContainer">
     <div id="carousel">
       <img src="./assets/menu1.png" alt="Menu 1" class="active">
