@@ -22,7 +22,7 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      z-index: 1; 
+      z-index: -1; 
       opacity: 0.6; 
     }
 
@@ -113,7 +113,8 @@
   </style>
 </head>
 <body>
-  <img id="background-gif" src="/Pizza-Barn-Menu-Website/assets/sparks.gif" alt="Sparks Background">
+
+  <img id="background-gif" alt="Sparks Background">
 
   <div id="outerContainer">
     <div id="carousel">
@@ -167,6 +168,11 @@
         prevImage();
       }
     }, { passive: true });
+
+    window.onload = function() {
+      let basePath = window.location.hostname.includes("github.io") ? "/Pizza-Barn-Menu-Website" : "";
+      document.getElementById("background-gif").src = `${basePath}/assets/sparks.gif`;
+    };
   </script>
 </body>
 </html>
