@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: 1stbtln/Pizza-Barn-Menu-Website
+  branch: main
+
+media_folder: "images/uploads"  
+public_folder: "/images/uploads"  
+
+collections:
+  - name: "menu"
+    label: "Menu Images"
+    folder: "images/uploads"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Image"
+        name: "image"
+        widget: "image"
+      - label: "Alt Text"
+        name: "alt"
+        widget: "string"
